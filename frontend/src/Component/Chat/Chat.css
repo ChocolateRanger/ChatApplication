@@ -14,7 +14,7 @@
     padding: 0;
     height: 80vh;
     width: 50%;
-    background-color: yellow;
+    background-color: white;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
 }
@@ -39,7 +39,7 @@
     margin: 0 10px 0 10px;
 }
 
-.chatBox{
+.chatBox {
     position: relative;
     overflow: scroll;
     height: 67vh;
@@ -61,6 +61,11 @@
     height: auto;
     width: 75%;
     border: none;
+    border-top: 2px solid rgb(224, 220, 220);
+}
+
+.messagesField:focus{
+    outline: none;
 }
 
 .btnSend {
@@ -68,4 +73,13 @@
     width: 25%;
     overflow: hidden;
     border: none;
+    border-top: 2px solid rgb(42, 71, 255);
+    background-color: rgb(87, 87, 255);
+    color: white;
 }
+
+.btnSend:hover{
+    cursor: pointer;
+    translate: ();
+}
+
