@@ -5,13 +5,14 @@ import { useLocation } from 'react-router-dom';
 import io from 'socket.io-client'
 import queryString from 'query-string'
 import Message from '../Message/Message';
+import ScrollToBottom from 'react-scroll-to-bottom'
 
 let socket;
 
 const Chat = () => {
 
     
-    const Endpoint = 'http://localhost:5000'
+    const Endpoint = 'https://chatappbackend-5mof.onrender.com'
     
     let location = useLocation();
     console.log(location.search)
@@ -43,7 +44,7 @@ const Chat = () => {
 
     useEffect(() => {
         socket.on('message', (message) => {
-            setMessages([message, ...messages])
+            setMessages([...messages, message])
             window.scrollTo(0, document.height)
         });
     }, [messages])
@@ -72,7 +73,7 @@ const Chat = () => {
                         {room}
                     </span>
                 </div>
-                <div className='chatBox'>
+                <ScrollToBottom className='chatBox'>
                     {
                         messages.map((e, i) => {
                             return <div key={i}>
@@ -80,7 +81,7 @@ const Chat = () => {
                             </div>
                         })
                     }
-                </div>
+                </ScrollToBottom>
                 <div className='bottomBar'>
                     <input
                         className='messagesField'

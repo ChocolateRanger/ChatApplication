@@ -18,7 +18,7 @@ const io = require("socket.io")(server, {
 });
 
 app.use(cors({
-    origin: 'http://localhost:3000'
+    origin: 'https://63ca8df3bada43220d2bda26--tourmaline-kashata-391eb1.netlify.app'
 }))
 
 
@@ -49,7 +49,6 @@ io.on('connection', (socket) => {
         console.log(socket.id);
         const user = getUser(socket.id);
         console.log(user);
-        console.log(user.name);
         io.to(user.room).emit('message', { user: user.name, text: message })
 
         callback();
