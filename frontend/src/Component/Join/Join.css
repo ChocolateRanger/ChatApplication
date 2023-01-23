@@ -4,7 +4,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: rgb(87, 87, 255);
+    background-color: rgb(197, 197, 255);
 }
 
 .joinOuterContainer{
@@ -20,12 +20,15 @@
 
 .joinOuterContainer h2{
     text-decoration: underline;
+    color: rgb(59, 59, 203);
 }
 
 .joinOuterContainer p{
     text-align: center;
     margin-bottom: 2px;
     margin-top: 20px;
+    font-weight: 600;
+    color: rgb(90, 90, 253);
 }
 
 .joinOuterContainer button{
@@ -35,7 +38,7 @@
 .inputField{
     width: 8rem;
     border-radius: 5px;
-    border: 2px solid rgb(87, 87, 255);
+    border: 2px solid rgb(3, 93, 239);
     padding-left: 5px;
 }
 

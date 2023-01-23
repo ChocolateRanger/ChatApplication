@@ -49,7 +49,10 @@ io.on('connection', (socket) => {
         console.log(socket.id);
         const user = getUser(socket.id);
         console.log(user);
-        io.to(user.room).emit('message', { user: user.name, text: message })
+        let dates = new Date();
+        let date = dates.getHours() + ':' + dates.getMinutes();
+        console.log(date);
+        io.to(user.room).emit('message', { user: user.name, text: message, date:date })
 
         callback();
     });

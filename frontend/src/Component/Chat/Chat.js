@@ -12,7 +12,7 @@ let socket;
 const Chat = () => {
 
     
-    const Endpoint = 'https://chatappbackend-5mof.onrender.com'
+    const Endpoint = 'localhost:5000'
     
     let location = useLocation();
     console.log(location.search)
@@ -21,6 +21,7 @@ const Chat = () => {
     const [room, setRoom] = useState('');
     const [message, setMessage] = useState('');
     const [messages, setMessages] = useState([]);
+    const [date, setDate] = useState(null);
     
     useEffect(() => {
         const { name, room } = queryString.parse(location.search);
@@ -45,7 +46,7 @@ const Chat = () => {
     useEffect(() => {
         socket.on('message', (message) => {
             setMessages([...messages, message])
-
+            console.log(messages);
         });
     }, [messages])
     
@@ -76,8 +77,10 @@ const Chat = () => {
                 <ScrollToBottom className='chatBox'>
                     {
                         messages.map((e, i) => {
+
+                            const time = new Date();
                             return <div key={i}>
-                                <Message user={e.user} text={e.text} name={name} />
+                                <Message user={e.user} text={e.text} name={name} time={time} date={e.date} />
                             </div>
                         })
                     }

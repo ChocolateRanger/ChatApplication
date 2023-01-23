@@ -1,7 +1,7 @@
-import React from 'react'
+import React, { useState } from 'react'
 import './Message.css'
 
-const Message = ({ user, text, name }) => {
+const Message = ({ user, text, name, date }) => {
 
   let isCurrentUser = false;
   let isAdmin = false;
@@ -15,6 +15,7 @@ const Message = ({ user, text, name }) => {
   }
 
 
+
   return (
     <>
 
@@ -26,10 +27,11 @@ const Message = ({ user, text, name }) => {
             </div>
             <div className='box-right message-right'>
               {text}
+              <div className='timeRight'>
+                {date}
+              </div>
             </div>
-            {/* <div className='timeStamp'>
-              Time
-            </div> */}
+           
           </div>
 
           :
@@ -40,9 +42,6 @@ const Message = ({ user, text, name }) => {
                 <div className='box-center'>
                   {text}
                 </div>
-                {/* <div className='timeStamp'>
-                  Time
-                </div> */}
               </div>
             </div>
 
@@ -54,9 +53,12 @@ const Message = ({ user, text, name }) => {
               </div>
               <div className='box-left message-left'>
                 {text}
+                <div className='timeLeft'>
+                  {date}
+                </div>
               </div>
-              {/* <div className='timeStamp'>
-                Time
+              {/* <div className='timeLeft'>
+                {date}
               </div> */}
             </div>
 

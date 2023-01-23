@@ -62,6 +62,7 @@
     width: 75%;
     border: none;
     border-top: 2px solid rgb(224, 220, 220);
+    padding-left: 5px;
 }
 
 .messagesField:focus {
