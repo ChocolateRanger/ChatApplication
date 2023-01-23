@@ -56,12 +56,13 @@ io.on('connection', (socket) => {
 
     socket.on('disconnect', () => {
         const user = removeUser(socket.id);
-        console.log('User has left');
-
-        if (user) {
-            io.to(user.room).emit('message', { user: 'Admin', text: `${user.name} has left.` });
-            io.to(user.room).emit('roomData', { room: user.room, users: getUsersInRoom(user.room) });
+        console.log(user);
+        console.log('User has Left');
+        
+        if(user){
+            io.to(user.room).emit('message', { user: 'admin', text: `${user.name} has left` })
         }
- 
+
+
     })
 })

@@ -12,7 +12,7 @@ let socket;
 const Chat = () => {
 
     
-    const Endpoint = 'https://chatappbackend-5mof.onrender.com'
+    const Endpoint = 'http://localhost:5000'
     
     let location = useLocation();
     console.log(location.search)
@@ -45,7 +45,7 @@ const Chat = () => {
     useEffect(() => {
         socket.on('message', (message) => {
             setMessages([...messages, message])
-            window.scrollTo(0, document.height)
+
         });
     }, [messages])
     
