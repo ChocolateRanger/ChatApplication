@@ -20,7 +20,7 @@ const Join = () => {
                     <input className='inputField' type="text" value={room} onChange={e => setRoom(e.target.value)} />
                 </div>
                 <Link onClick={e => (!name || !room) ? e.preventDefault() : null} to={`/chat?name=${name}&room=${room}`}>
-                    <button>
+                    <button className='btn-submit'>
                         SUBMIT
                     </button>
                     

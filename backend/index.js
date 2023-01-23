@@ -4,7 +4,7 @@ const http = require('http');
 const router = require('./router');
 const port = process.env.PORT || 5000;
 const cors = require('cors');
-const { addUser, removeUser, getUser, getUsersInRoom } = require('./users.js')
+const { addUser, removeUser, getUser } = require('./users.js')
 
 const app = express();
 const server = http.createServer(app);

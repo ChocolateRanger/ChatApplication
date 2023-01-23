@@ -4,7 +4,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: black;
+    background-color: rgb(87, 87, 255);
 }
 
 .joinOuterContainer{
@@ -29,9 +29,34 @@
 }
 
 .joinOuterContainer button{
-    margin-top: 2vh;
+    margin-top: 2rem;
 }
 
 .inputField{
     width: 8rem;
+    border-radius: 5px;
+    border: 2px solid rgb(87, 87, 255);
+    padding-left: 5px;
+}
+
+.inputField:focus{
+    outline:none;
+}
+
+.btn-submit{
+    border-radius: 5px;
+    outline: none;
+    border: none;
+    background-color: rgb(87, 87, 255);
+    color: white;
+    padding: 5px 7px;
+}
+
+.btn-submit:focus{
+    outline: none;
+}
+
+.btn-submit:hover{
+    cursor: pointer;
+    box-shadow: -1px 2px 10px blue;
 }
