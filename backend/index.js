@@ -17,10 +17,6 @@ const io = require("socket.io")(server, {
     }
 });
 
-app.use(cors({
-    origin: 'https://63ca8df3bada43220d2bda26--tourmaline-kashata-391eb1.netlify.app'
-}))
-
 
 app.use(router);
 
@@ -50,7 +46,9 @@ io.on('connection', (socket) => {
         const user = getUser(socket.id);
         console.log(user);
         let dates = new Date();
-        let date = dates.getHours() + ':' + dates.getMinutes();
+        let time = dates.getHours() + ':' + dates.getMinutes();
+        let date = time.split(':').map(e => e.padStart(2, 0)).join(':')
+        // let time = date.split(':').map(e => e.padStart(2, 0)).join(':')
         console.log(date);
         io.to(user.room).emit('message', { user: user.name, text: message, date:date })
 

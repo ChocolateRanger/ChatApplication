@@ -12,7 +12,7 @@ let socket;
 const Chat = () => {
 
     
-    const Endpoint = 'localhost:5000'
+    const Endpoint = 'https://chatappbackend-5mof.onrender.com/'
     
     let location = useLocation();
     console.log(location.search)
@@ -21,7 +21,6 @@ const Chat = () => {
     const [room, setRoom] = useState('');
     const [message, setMessage] = useState('');
     const [messages, setMessages] = useState([]);
-    const [date, setDate] = useState(null);
     
     useEffect(() => {
         const { name, room } = queryString.parse(location.search);
