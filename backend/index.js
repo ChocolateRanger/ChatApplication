@@ -1,3 +1,5 @@
+// https://chatappbackend-5mof.onrender.com/
+
 const express = require('express');
 const socketio = require('socket.io');
 const http = require('http');
@@ -11,13 +13,12 @@ const server = http.createServer(app);
 
 const io = require("socket.io")(server, {
     cors: {
-        origin: "*",
-        methods: ["GET", "POST"],
-        credentials: true
+        origin: "https://63d3b5c61684300008f036ef--timely-lolly-560457.netlify.app/",
+        methods: ["GET", "POST"]
     }
 });
 
-
+app.use(cors());
 app.use(router);
 
 server.listen(port, () => console.log(`Server has started on Port ${port}`));
@@ -50,7 +51,7 @@ io.on('connection', (socket) => {
         let date = time.split(':').map(e => e.padStart(2, 0)).join(':')
         // let time = date.split(':').map(e => e.padStart(2, 0)).join(':')
         console.log(date);
-        io.to(user.room).emit('message', { user: user.name, text: message, date:date })
+        io.to(user.room).emit('message', { user: user.name, text: message, date: date })
 
         callback();
     });
@@ -59,8 +60,8 @@ io.on('connection', (socket) => {
         const user = removeUser(socket.id);
         console.log(user);
         console.log('User has Left');
-        
-        if(user){
+
+        if (user) {
             io.to(user.room).emit('message', { user: 'admin', text: `${user.name} has left` })
         }
 
