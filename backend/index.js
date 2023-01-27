@@ -11,14 +11,13 @@ const { addUser, removeUser, getUser } = require('./users.js')
 const app = express();
 const server = http.createServer(app);
 
-const io = require("socket.io")(server, {
+const io = require('socket.io') (server, {
     cors: {
-        origin: "https://63d3b5c61684300008f036ef--timely-lolly-560457.netlify.app/",
+        origin: "https://63d3b5c61684300008f036ef--timely-lolly-560457.netlify.app",
         methods: ["GET", "POST"]
     }
 });
 
-app.use(cors());
 app.use(router);
 
 server.listen(port, () => console.log(`Server has started on Port ${port}`));
