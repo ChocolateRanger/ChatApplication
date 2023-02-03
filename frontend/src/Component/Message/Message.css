@@ -1,0 +1,130 @@
+::-webkit-scrollbar {
+    display: none;
+}
+
+.messages {
+    margin: 10px 0 20px;
+}
+
+.message-user-right {
+    text-align: right;
+    margin-right: 18px;
+    font-weight: 600;
+    color: black;
+    margin-bottom: 3px;
+}
+
+.box-right {
+    max-width: 50%;
+    min-width: 10%;
+    width: fit-content;
+    margin-left: auto;
+    margin-right: 14px;
+    border-radius: 15px;
+    background: #00bfb6;
+    color: #fff;
+    text-align: left;
+    font-weight: 500;
+    padding: 10px;
+    padding-right: 12px;
+    padding-bottom: 2px;
+    font-family: arial;
+    position: relative;
+}
+
+.message-right::before {
+    content: "";
+    width: 0px;
+    height: 0px;
+    position: absolute;
+    border-left: 15px solid #00bfb6;
+    border-right: 15px solid transparent;
+    border-top: 15px solid #00bfb6;
+    border-bottom: 15px solid transparent;
+    right: -16px;
+    top: 0px;
+
+}
+
+.message-user-left {
+    text-align: left;
+    margin-left: 18px;
+    font-weight: 600;
+    color: black;
+    margin-bottom: 3px;
+}
+
+.box-left {
+    max-width: 50%;
+    min-width: 10%;
+    width: fit-content;
+    margin-left: auto;
+    margin-left: 14px;
+    border-radius: 15px;
+    background: #dadada;
+    color: rgb(0, 0, 0);
+    text-align: left;
+    font-weight: 500;
+    padding: 10px;
+    padding-bottom: 4px;
+    font-family: arial;
+    position: relative;
+}
+
+.message-left::before {
+    content: "";
+    width: 0px;
+    height: 0px;
+    position: absolute;
+    border-left: 16px solid transparent;
+    border-top: 15px solid #dadada;
+    border-right: 15px solid transparent;
+    border-bottom: 15px solid transparent;
+    left: -16px;
+    top: 0px;
+
+}
+
+.messages-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.box-center {
+    max-width: 50%;
+    position: relative;
+    border-radius: 15px;
+    background: #425be9;
+    color: #fff;
+    text-align: center;
+    font-weight: 500;
+    padding: 10px;
+    font-family: arial;
+}
+
+.timeRight {
+    width: fit-content;
+    margin-left: auto;
+    border-radius: 15px;
+    color: fewff;
+    text-align: right;
+    font-weight: 100;
+    padding: 4px;
+    font-family: arial;
+    position: relative;
+    font-size: xx-small;
+}
+
+.timeLeft {
+    width: fit-content;
+    text-align: right;
+    color: rgb(0, 0, 0);
+    font-weight: 200;
+    margin-top: 5px;
+    font-family: arial;
+    position: relative;
+    font-size: xx-small;
+    margin-left: auto;
+}
