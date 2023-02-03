@@ -92,7 +92,7 @@
 
 @media screen and (max-width:900px) {
     .messageContainer{
-        width: 90%;
         height: 95%;
+        width: 90%;
     }
 }

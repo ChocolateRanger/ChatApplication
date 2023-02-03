@@ -14,7 +14,7 @@ let socket;
 const Chat = () => {
 
     
-    const Endpoint = 'http://localhost:5000'
+    const Endpoint = 'https://chatappbackend-5mof.onrender.com'
     
     let location = useLocation();
     console.log(location.search)
