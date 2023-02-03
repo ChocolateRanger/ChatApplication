@@ -5,7 +5,7 @@ const socketio = require('socket.io');
 const http = require('http');
 const router = require('./router');
 const port = process.env.PORT || 5000;
-const cors = require('cors');
+// const cors = require('cors');
 const { addUser, removeUser, getUser } = require('./users.js')
 
 const app = express();
@@ -13,7 +13,7 @@ const server = http.createServer(app);
 
 const io = require('socket.io') (server, {
     cors: {
-        origin: "https://63d3b5c61684300008f036ef--timely-lolly-560457.netlify.app",
+        origin: "https://63dcce5e2281a73c6927e7b1--timely-lolly-560457.netlify.app",
         methods: ["GET", "POST"]
     }
 });
