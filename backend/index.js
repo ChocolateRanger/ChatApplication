@@ -13,7 +13,7 @@ const server = http.createServer(app);
 
 const io = require('socket.io') (server, {
     cors: {
-        origin: "https://63dcce5e2281a73c6927e7b1--timely-lolly-560457.netlify.app",
+        origin: "https://63dcd0357beb263df848fcd6--timely-lolly-560457.netlify.app",
         methods: ["GET", "POST"]
     }
 });

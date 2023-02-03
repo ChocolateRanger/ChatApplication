@@ -1,5 +1,5 @@
 
-// https://63dcce5e2281a73c6927e7b1--timely-lolly-560457.netlify.app
+// https://63dcd0357beb263df848fcd6--timely-lolly-560457.netlify.app/
 
 import './Chat.css'
 import onlineIcon from '../img/icons8-green-circle-48.png'
